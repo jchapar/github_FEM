@@ -1,13 +1,30 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="css/style.css">
-  <title>Tailwind Starter</title>
-</head>
-<body>
-  <h1 class="text-3xl bg-cyan-300">Tailwind</h1>
-</body>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Github Profile Finder</title>
+  </head>
+  <body class="bg-lightColor dark:bg-dark">
+    <div class="container max-auto">
+      <!-- Main Flex Container -->
+      <div class="flex items-center jusify-center p-6">
+        <!-- Main Content -->
+        <div class="content">
+          <div class="flex items-center justify-between">
+            <!-- Logo -->
+            <h1>devFinder</h1>
+            <!-- Dark/Light Mode -->
+            <img src="assets/icon-moon.svg" alt="" class="dark:hidden" />
+            <img src="assets/icon-sun.svg" alt="" class="hidden dark:block" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
 </html>
