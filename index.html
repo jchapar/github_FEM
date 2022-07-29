@@ -7,21 +7,35 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+    <script src="https://kit.fontawesome.com/9a3dbda65a.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/style.css" />
     <title>Github Profile Finder</title>
   </head>
-  <body class="bg-lightColor dark:bg-dark">
+  <body class="bg-lightColor dark:bg-dark font-sans">
     <div class="container max-auto">
       <!-- Main Flex Container -->
       <div class="flex items-center jusify-center p-6">
         <!-- Main Content -->
-        <div class="content">
-          <div class="flex items-center justify-between">
+        <div class="content w-full">
+          <!-- Header -->
+          <div class="flex items-center justify-between mb-10">
             <!-- Logo -->
-            <h1>devFinder</h1>
+            <h1 class="text-3xl text-white font-bold">devfinder</h1>
             <!-- Dark/Light Mode -->
-            <img src="assets/icon-moon.svg" alt="" class="dark:hidden" />
-            <img src="assets/icon-sun.svg" alt="" class="hidden dark:block" />
+            <div class="dark:hidden flex items-center justify-center">
+              <p>DARK</p>
+              <img src="assets/icon-moon.svg" alt="" class="cursor-pointer" />
+            </div>
+            <div class="dark:flex items-center justify-center">
+              <p class="mr-3 text-white">LIGHT</p>
+              <img src="assets/icon-sun.svg" alt="" class="cursor-pointer" />
+            </div>
+          </div>
+          <!-- Search Input -->
+          <div class="relative flex items-center">
+            <i class="fa-solid fa-magnifying-glass text-2xl absolute top-3 left-5"></i>
+            <input type="text" placeholder="Search Github username..." class="w-full py-5 pl-14 rounded-xl" />
+            <a href="#" id="search-btn" class="absolute top-3 right-5 bg-primaryBlue py-2 px-5 rounded-xl text-white m-0">Search</a>
           </div>
         </div>
       </div>
