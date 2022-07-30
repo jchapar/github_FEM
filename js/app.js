@@ -37,12 +37,16 @@ searchBtn.addEventListener('click', () => {
     github.getUser(searchText).then((data) => {
       if (data.message === 'Not Found') {
         // Show Alert
+        ui.showAlert();
+        setTimeout(() => {
+          ui.showAlert();
+        }, 2000);
       } else {
         // Show Profile
         ui.showProfile(data);
+        // Clear Field
+        ui.clearField();
       }
     });
-  } else {
-    // Clear Profile
   }
 });

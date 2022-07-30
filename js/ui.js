@@ -2,6 +2,8 @@ class UI {
   constructor() {
     this.profile = document.getElementById('user-profile');
     this.profileLarger = document.getElementById('user-profile-larger');
+    this.errorMsg = document.getElementById('error');
+    this.searchField = document.getElementById('search');
   }
 
   showProfile(profile) {
@@ -49,8 +51,8 @@ class UI {
           <p class="text-steelBlue dark:text-white text-md">${profile.location}</p>
         </div>
         <div class="flex items-center justify-start space-x-5">
-          <i class="fa-solid fa-link text-steelBlue dark:text-lightColor text-lg"></i>
-          <p class="text-steelBlue dark:text-white text-md">${profile.blog}</p>
+        <i class="fa-solid fa-link text-steelBlue dark:text-lightColor text-lg"></i>
+        <p class="text-steelBlue dark:text-white text-md">${profile.html_url}</p>
         </div>
         <div class="flex items-center justify-start space-x-7">
           <i class="fa-brands fa-twitter text-ironBlue text-lg"></i>
@@ -172,5 +174,15 @@ class UI {
         </div>
       </div>
     `;
+  }
+
+  // Show Alert Message in UI
+  showAlert() {
+    this.errorMsg.classList.toggle('hidden');
+  }
+
+  // Clear Input field
+  clearField() {
+    this.searchField.value = '';
   }
 }
