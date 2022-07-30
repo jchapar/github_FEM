@@ -616,6 +616,46 @@ video {
   right: 1rem;
 }
 
+.right-10 {
+  right: 2.5rem;
+}
+
+.right-20 {
+  right: 5rem;
+}
+
+.right-80 {
+  right: 20rem;
+}
+
+.right-52 {
+  right: 13rem;
+}
+
+.right-40 {
+  right: 10rem;
+}
+
+.right-36 {
+  right: 9rem;
+}
+
+.right-28 {
+  right: 7rem;
+}
+
+.right-32 {
+  right: 8rem;
+}
+
+.top-8 {
+  top: 2rem;
+}
+
+.top-6 {
+  top: 1.5rem;
+}
+
 .m-0 {
   margin: 0px;
 }
@@ -943,6 +983,16 @@ video {
 .text-steelBlue {
   --tw-text-opacity: 1;
   color: rgb(75 106 155 / var(--tw-text-opacity));
+}
+
+.text-red-600 {
+  --tw-text-opacity: 1;
+  color: rgb(220 38 38 / var(--tw-text-opacity));
+}
+
+.text-\[\#f74646\] {
+  --tw-text-opacity: 1;
+  color: rgb(247 70 70 / var(--tw-text-opacity));
 }
 
 .shadow-xl {

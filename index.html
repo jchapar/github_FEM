@@ -35,12 +35,13 @@
           <!-- Search Input -->
           <div class="relative flex items-center mb-10">
             <i class="fa-solid fa-magnifying-glass text-2xl absolute top-4 left-4 text-primaryBlue"></i>
-            <input type="text" placeholder="Search Github username..." class="w-full shadow-xl py-5 pl-14 rounded-xl bg-white dark:bg-darkBlue text-md font-light dark:text-white placeholder:text-steelBlue dark:placeholder:text-white focus:outline-none" />
+            <input type="text" id="search" placeholder="Search Github username..." class="w-full shadow-xl py-5 pl-14 rounded-xl bg-white dark:bg-darkBlue text-md font-light dark:text-white placeholder:text-steelBlue dark:placeholder:text-white focus:outline-none" />
+            <small id="error" class="absolute text-[#f74646] top-6 right-32 font-bold hidden">No Results</small>
             <a href="#" id="search-btn" class="absolute top-3 right-4 bg-primaryBlue py-2 px-5 rounded-xl text-white m-0">Search</a>
           </div>
 
           <!-- Main Content SM-MD Screens-->
-          <div class="bg-white shadow-2xl dark:bg-darkBlue w-full rounded-xl p-6 lg:hidden">
+          <div id="user-profile" class="bg-white shadow-2xl dark:bg-darkBlue w-full rounded-xl p-6 lg:hidden">
             <!-- User -->
             <div class="flex items-center mb-5">
               <!-- Image -->
@@ -117,7 +118,7 @@
           </div>
 
           <!-- Main Content LG Screens-->
-          <div class="bg-white shadow-2xl dark:bg-darkBlue w-full rounded-xl p-6 hidden lg:flex">
+          <div id="user-profile" class="bg-white shadow-2xl dark:bg-darkBlue w-full rounded-xl p-6 hidden lg:flex">
             <!-- Image -->
             <div class="basis-1/3">
               <img src="assets/anubis.JPG" alt="User Profile Image" class="rounded-full h-[150px] w-[150px]" />
@@ -214,6 +215,8 @@
       </div>
     </div>
 
+    <script src="js/github.js"></script>
+    <script src="js/ui.js"></script>
     <script src="js/app.js"></script>
   </body>
 </html>

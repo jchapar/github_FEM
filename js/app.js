@@ -1,3 +1,8 @@
+// Init Github
+const github = new Github();
+// Init UI
+const ui = new UI();
+
 // Theme toggle button
 const lightMode = document.getElementById('toggle-light');
 const darkMode = document.getElementById('toggle-dark');
@@ -17,3 +22,27 @@ darkMode.addEventListener('click', () => {
 const toggleTheme = function () {
   document.documentElement.classList.toggle('dark');
 };
+
+// Search Input
+const searchUser = document.getElementById('search');
+const searchBtn = document.getElementById('search-btn');
+
+// Search Button Event Listeer
+searchBtn.addEventListener('click', () => {
+  // Get input text
+  const searchText = searchUser.value;
+
+  if (searchText !== '') {
+    // Make HTTP Call
+    github.getUser(searchText).then((data) => {
+      if (data.message === 'Not Found') {
+        // Show Alert
+      } else {
+        // Show Profile
+        ui.showProfile(data);
+      }
+    });
+  } else {
+    // Clear Profile
+  }
+});
