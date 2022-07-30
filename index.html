@@ -12,33 +12,208 @@
     <title>Github Profile Finder</title>
   </head>
   <body class="bg-lightColor dark:bg-dark font-sans">
-    <div class="container max-auto">
+    <div class="container mx-auto max-w-[500px] lg:max-w-[750px]">
       <!-- Main Flex Container -->
-      <div class="flex items-center jusify-center p-6">
-        <!-- Main Content -->
-        <div class="content w-full">
+      <div class="flex flex-col items-center jusify-center p-6">
+        <!-- Main Content Container -->
+        <div class="content w-full flex flex-col">
           <!-- Header -->
           <div class="flex items-center justify-between mb-10">
             <!-- Logo -->
-            <h1 class="text-3xl text-white font-bold">devfinder</h1>
+            <h1 class="text-3xl text-dark dark:text-white font-bold">devfinder</h1>
             <!-- Dark/Light Mode -->
             <div class="dark:hidden flex items-center justify-center">
-              <p>DARK</p>
-              <img src="assets/icon-moon.svg" alt="" class="cursor-pointer" />
+              <p class="mr-3">DARK</p>
+              <img src="assets/icon-moon.svg" alt="" class="cursor-pointer" id="toggle-dark" />
             </div>
-            <div class="dark:flex items-center justify-center">
+            <div class="hidden dark:flex items-center justify-center">
               <p class="mr-3 text-white">LIGHT</p>
-              <img src="assets/icon-sun.svg" alt="" class="cursor-pointer" />
+              <img src="assets/icon-sun.svg" alt="" class="cursor-pointer" id="toggle-light" />
             </div>
           </div>
+
           <!-- Search Input -->
-          <div class="relative flex items-center">
-            <i class="fa-solid fa-magnifying-glass text-2xl absolute top-3 left-5"></i>
-            <input type="text" placeholder="Search Github username..." class="w-full py-5 pl-14 rounded-xl" />
-            <a href="#" id="search-btn" class="absolute top-3 right-5 bg-primaryBlue py-2 px-5 rounded-xl text-white m-0">Search</a>
+          <div class="relative flex items-center mb-10">
+            <i class="fa-solid fa-magnifying-glass text-2xl absolute top-4 left-4 text-primaryBlue"></i>
+            <input type="text" placeholder="Search Github username..." class="w-full shadow-xl py-5 pl-14 rounded-xl bg-white dark:bg-darkBlue text-md font-light dark:text-white placeholder:text-steelBlue dark:placeholder:text-white focus:outline-none" />
+            <a href="#" id="search-btn" class="absolute top-3 right-4 bg-primaryBlue py-2 px-5 rounded-xl text-white m-0">Search</a>
+          </div>
+
+          <!-- Main Content SM-MD Screens-->
+          <div class="bg-white shadow-2xl dark:bg-darkBlue w-full rounded-xl p-6 lg:hidden">
+            <!-- User -->
+            <div class="flex items-center mb-5">
+              <!-- Image -->
+              <img src="assets/anubis.JPG" alt="User Profile Image" class="rounded-full h-[100px] w-[100px]" />
+              <!-- User Info -->
+              <div class="flex flex-col items-start justify-start ml-5">
+                <h2 class="text-dark dark:text-white">The Octocat</h2>
+                <p class="text-primaryBlue">@octocat</p>
+                <p class="text-steelBlue dark:text-white">Joined 25 Jan 2011</p>
+              </div>
+            </div>
+            <!-- User Bio -->
+            <p id="user-bio" class="text-steelBlue dark:text-white font-sans leading-7 text-lg mb-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur neque, repellendus rem ex, ratione perspiciatis dicta</p>
+
+            <!-- User Stats -->
+            <div class="bg-lightColor dark:bg-dark flex items-center justify-center rounded-xl py-5 mb-5 space-x-8">
+              <div class="flex flex-col items-center justify-center space-y-3">
+                <p class="text-steelBlue dark:text-lightColor">Repos</p>
+                <p class="text-dark dark:text-white text-2xl">8</p>
+              </div>
+              <div class="flex flex-col items-center justify-center space-y-3">
+                <p class="text-steelBlue dark:text-lightColor">Followers</p>
+                <p class="text-dark dark:text-white text-2xl">938</p>
+              </div>
+              <div class="flex flex-col items-center justify-center space-y-3">
+                <p class="text-steelBlue dark:text-lightColor">Following</p>
+                <p class="text-dark dark:text-white text-2xl">9</p>
+              </div>
+            </div>
+
+            <!-- User Details SM Screens-->
+            <div class="flex flex-col space-y-3 md:hidden">
+              <div class="flex items-center justify-start space-x-7">
+                <i class="fa-solid fa-location-dot text-steelBlue dark:text-lightColor text-lg"></i>
+                <p class="text-steelBlue dark:text-white text-md">San Francisco</p>
+              </div>
+              <div class="flex items-center justify-start space-x-5">
+                <i class="fa-solid fa-link text-steelBlue dark:text-lightColor text-lg"></i>
+                <p class="text-steelBlue dark:text-white text-md">https://github.blog</p>
+              </div>
+              <div class="flex items-center justify-start space-x-7">
+                <i class="fa-brands fa-twitter text-ironBlue text-lg"></i>
+                <p class="text-ironBlue text-md">Not Available</p>
+              </div>
+              <div class="flex items-center justify-start space-x-7">
+                <i class="fa-solid fa-building text-steelBlue dark:text-lightColor text-lg"></i>
+                <p class="text-ironBlue dark:text-white text-md">@github</p>
+              </div>
+            </div>
+
+            <!-- User Details MD Screens-->
+            <div class="hidden md:flex justify-between space-x-5">
+              <div class="flex flex-col items-center">
+                <div class="flex items-center justify-start space-x-3">
+                  <i class="fa-solid fa-location-dot text-steelBlue dark:text-lightColor text-lg"></i>
+                  <p class="text-steelBlue dark:text-white text-md">San Francisco</p>
+                </div>
+                <div class="flex items-center justify-start space-x-3">
+                  <i class="fa-brands fa-twitter text-ironBlue text-lg"></i>
+                  <p class="text-ironBlue text-md">Not Available</p>
+                </div>
+              </div>
+              <div class="flex flex-col items-start justify-start">
+                <div class="flex items-center justify-start space-x-3">
+                  <i class="fa-solid fa-link text-steelBlue dark:text-lightColor text-lg"></i>
+                  <p class="text-steelBlue dark:text-white text-md">https://github.blog</p>
+                </div>
+                <div class="flex items-center justify-start space-x-5">
+                  <i class="fa-solid fa-building text-steelBlue dark:text-lightColor text-lg"></i>
+                  <p class="text-steelBlue dark:text-white text-md">@github</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Main Content LG Screens-->
+          <div class="bg-white shadow-2xl dark:bg-darkBlue w-full rounded-xl p-6 hidden lg:flex">
+            <!-- Image -->
+            <div class="basis-1/3">
+              <img src="assets/anubis.JPG" alt="User Profile Image" class="rounded-full h-[150px] w-[150px]" />
+            </div>
+            <!-- Everything Else -->
+            <div class="basis-2/3">
+              <!-- User -->
+              <div class="mb-5">
+                <!-- User Info -->
+                <div class="flex flex-col">
+                  <div class="flex items-center justify-between">
+                    <h2 class="text-dark dark:text-white text-2xl">The Octocat</h2>
+                    <p class="text-steelBlue dark:text-white">Joined 25 Jan 2011</p>
+                  </div>
+                  <div class="">
+                    <p class="text-primaryBlue">@octocat</p>
+                  </div>
+                </div>
+                <!-- <div class="flex items-start justify-between">
+                  <div class="flex flex-col">
+                    <h2 class="text-dark dark:text-white text-2xl">The Octocat</h2>
+                    <p class="text-primaryBlue">@octocat</p>
+                  </div>
+                  <div class="">
+                    <p class="text-steelBlue dark:text-white">Joined 25 Jan 2011</p>
+                  </div>
+                </div> -->
+              </div>
+              <!-- User Bio -->
+              <p id="user-bio" class="text-steelBlue dark:text-white font-sans leading-7 text-lg mb-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur neque, repellendus rem ex, ratione perspiciatis dicta</p>
+
+              <!-- User Stats -->
+              <div class="bg-lightColor dark:bg-dark flex items-center justify-center rounded-xl py-5 mb-5 space-x-8">
+                <div class="flex flex-col items-center justify-center space-y-3">
+                  <p class="text-steelBlue dark:text-lightColor">Repos</p>
+                  <p class="text-dark dark:text-white text-2xl">8</p>
+                </div>
+                <div class="flex flex-col items-center justify-center space-y-3">
+                  <p class="text-steelBlue dark:text-lightColor">Followers</p>
+                  <p class="text-dark dark:text-white text-2xl">938</p>
+                </div>
+                <div class="flex flex-col items-center justify-center space-y-3">
+                  <p class="text-steelBlue dark:text-lightColor">Following</p>
+                  <p class="text-dark dark:text-white text-2xl">9</p>
+                </div>
+              </div>
+
+              <!-- User Details SM Screens-->
+              <div class="flex flex-col space-y-3 md:hidden">
+                <div class="flex items-center justify-start space-x-7">
+                  <i class="fa-solid fa-location-dot text-steelBlue dark:text-lightColor text-lg"></i>
+                  <p class="text-steelBlue dark:text-white text-md">San Francisco</p>
+                </div>
+                <div class="flex items-center justify-start space-x-5">
+                  <i class="fa-solid fa-link text-steelBlue dark:text-lightColor text-lg"></i>
+                  <p class="text-steelBlue dark:text-white text-md">https://github.blog</p>
+                </div>
+                <div class="flex items-center justify-start space-x-7">
+                  <i class="fa-brands fa-twitter text-ironBlue text-lg"></i>
+                  <p class="text-ironBlue text-md">Not Available</p>
+                </div>
+                <div class="flex items-center justify-start space-x-7">
+                  <i class="fa-solid fa-building text-steelBlue dark:text-lightColor text-lg"></i>
+                  <p class="text-ironBlue dark:text-white text-md">@github</p>
+                </div>
+              </div>
+
+              <!-- User Details MD Screens-->
+              <div class="hidden md:flex justify-between space-x-5">
+                <div class="flex flex-col items-center">
+                  <div class="flex items-center justify-start space-x-3">
+                    <i class="fa-solid fa-location-dot text-steelBlue dark:text-lightColor text-lg"></i>
+                    <p class="text-steelBlue dark:text-white text-md">San Francisco</p>
+                  </div>
+                  <div class="flex items-center justify-start space-x-3">
+                    <i class="fa-brands fa-twitter text-ironBlue text-lg"></i>
+                    <p class="text-ironBlue text-md">Not Available</p>
+                  </div>
+                </div>
+                <div class="flex flex-col items-start justify-start">
+                  <div class="flex items-center justify-start space-x-3">
+                    <i class="fa-solid fa-link text-steelBlue dark:text-lightColor text-lg"></i>
+                    <p class="text-steelBlue dark:text-white text-md">https://github.blog</p>
+                  </div>
+                  <div class="flex items-center justify-start space-x-5">
+                    <i class="fa-solid fa-building text-steelBlue dark:text-lightColor text-lg"></i>
+                    <p class="text-steelBlue dark:text-white text-md">@github</p>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </div>
+
+    <script src="js/app.js"></script>
   </body>
 </html>
