@@ -9,14 +9,10 @@ const darkMode = document.getElementById('toggle-dark');
 
 lightMode.addEventListener('click', () => {
   toggleTheme();
-  // lightMode.classList.toggle('hidden');
-  // darkMode.classList.toggle('flex');
 });
 
 darkMode.addEventListener('click', () => {
   toggleTheme();
-  // lightMode.classList.toggle('flex');
-  // darkMode.classList.toggle('hidden');
 });
 
 const toggleTheme = function () {
