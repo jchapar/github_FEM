@@ -34,7 +34,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [View Github Code](https://github.com/jchapar/github_FEM)
-- Live Site URL: [Visit Site]()
+- Live Site URL: [Visit Site](https://jchapar.github.io/github_FEM/)
 
 ## My process
 
